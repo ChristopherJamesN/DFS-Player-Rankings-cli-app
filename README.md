@@ -5,11 +5,13 @@ This Ruby Gem provides a CLI to view the top 10 DFS players overall, TPOY, or Su
 Installation
 
 $ gem install chrisnady-cli-app
+
 Usage
 
 Type the below and follow the on screen prompts.
 
 $ chrisnady-cli-app
+
 Development
 
 After checking out the repo, run bin/setup to install dependencies. Then, run rake spec to run the tests. You can also run bin/console for an interactive prompt that will allow you to experiment.
