@@ -2,6 +2,7 @@
 DFS Player Rankings
 
 This Ruby Gem provides a CLI to view the top 10 DFS players overall, TPOY, or Super class.
+
 Installation
 
 $ gem install chrisnady-cli-app
