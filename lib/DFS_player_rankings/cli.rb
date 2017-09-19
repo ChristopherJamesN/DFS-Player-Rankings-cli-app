@@ -8,7 +8,7 @@ class DFSPlayerRankings::CLI
 
   def start
     puts ""
-    puts "Which rankings system would you like to see? Overall, TPOY, Super, Heavy, and Mid"
+    puts "Which set of players would you like to see? 1-10, 11-20, 21-30, 31-40, 41-50"
     input = gets.strip.to_i
 
     print_players(input)
@@ -38,7 +38,7 @@ class DFSPlayerRankings::CLI
     puts ""
     puts "----------- #{player.name} - #{player.rank} -----------"
     puts ""
-    puts "Highest Scores:           #{player.highestscores}"
+    puts "Total points:           #{player.totalpoints}"
     puts ""
   end
 

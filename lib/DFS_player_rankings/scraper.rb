@@ -5,7 +5,7 @@ class DFSPlayerRankings::Scraper
   end
 
   def scrape_players_index
-    self.get_page.css("table.tbl rankings grinders")
+    self.get_page.css("table.tbl tbody")
   end
 
   def make_players
