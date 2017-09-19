@@ -1,0 +1,2 @@
+class DFSPlayerRankings::Scraper
+end
