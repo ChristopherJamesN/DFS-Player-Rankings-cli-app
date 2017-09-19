@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/DFS_player_rankings'
+
+DFSPlayerRankings::CLI.new.call
