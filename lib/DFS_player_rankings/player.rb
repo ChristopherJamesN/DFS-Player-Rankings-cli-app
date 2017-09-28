@@ -19,9 +19,7 @@ class DFSPlayerRankings::Player
     end
     combinedpoints/(self.all.count)
   end
-  #Add more methods to grab and manipulate data for individual players.
-  #Does rotogrinder have an API that can output player rankings data?
-  #Google autcompletion in terminal - should be able to tab to autocomplete.
+
 
   def self.all
     @@all
