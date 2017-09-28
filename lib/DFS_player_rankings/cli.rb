@@ -3,6 +3,7 @@ class DFSPlayerRankings::CLI
   def call
     DFSPlayerRankings::Scraper.new.make_players
     puts "Welcome to the top DFS players in the world"
+    puts "The average points for all the players is: #{DFSPlayerRankings::Player.avg_points}"
     start
   end
 

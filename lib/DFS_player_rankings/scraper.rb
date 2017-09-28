@@ -10,7 +10,9 @@ class DFSPlayerRankings::Scraper
 
   def make_players
     scrape_players_index.each do |r|
-      DFSPlayerRankings::Player.new_from_index_page(r)
+      DFSPlayerRankings::Player.new(r.css("td.player a").text,
+      r.css("td.rank").text.strip,
+      r.css("td.points").text.strip)
     end
   end
 

@@ -5,20 +5,23 @@ class DFSPlayerRankings::Player
 
   @@all = []
 
-  def self.new_from_index_page(r)
-    self.new(
-      r.css("td.player a").text,
-      r.css("td.rank").text.strip,
-      r.css("td.points").text.strip
-      )
-  end
-
   def initialize(name=nil, rank=nil, totalpoints=nil)
     @name = name
     @rank = rank
     @totalpoints = totalpoints
     @@all << self
   end
+
+  def self.avg_points
+    combinedpoints = 0
+    self.all.each do |player|
+      combinedpoints += player.totalpoints.gsub(',','').to_i
+    end
+    combinedpoints/(self.all.count)
+  end
+  #Add more methods to grab and manipulate data for individual players.
+  #Does rotogrinder have an API that can output player rankings data?
+  #Google autcompletion in terminal - should be able to tab to autocomplete.
 
   def self.all
     @@all
@@ -31,5 +34,7 @@ class DFSPlayerRankings::Player
   def doc
     @doc ||= Nokogiri::HTML(open(self.url))
   end
+
+  #V2 addition to dive into more player details
 
 end
