@@ -1,6 +1,5 @@
 class DFSPlayerRankings::Player
 
-
   attr_accessor :name, :rank, :totalpoints
 
   @@all = []
