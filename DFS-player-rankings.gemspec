@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.executables << 'DFS-player-rankings'
 
   s.add_development_dependency "bundler", "~> 1.10"
-  s.add_development_dependency "rake", "~> 10.0"
+  s.add_development_dependency "rake", "~> 12.3"
   s.add_development_dependency "rspec", ">= 0"
   s.add_development_dependency "nokogiri", ">= 0"
   s.add_development_dependency "pry", ">= 0"
