@@ -38,7 +38,7 @@ DEPENDENCIES
   bundler (>= 2.2.10)
   nokogiri
   pry
-  rake (~> 10.0)
+  rake (~> 12.3)
   rspec
 
 BUNDLED WITH
