@@ -1,7 +1,7 @@
 class DFSPlayerRankings::Scraper
 
   def get_page
-    Nokogiri::HTML(open("https://rotogrinders.com/rankings"))
+    Nokogiri::HTML(URI.open("https://rotogrinders.com/rankings"))
   end
 
   def scrape_players_index
