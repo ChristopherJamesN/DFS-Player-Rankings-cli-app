@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
   s.executables << 'DFS-player-rankings'
 
-  s.add_development_dependency "bundler",  ">= 2.2.10"
+  s.add_development_dependency "bundler",  ">= 2.3.25"
   s.add_development_dependency "rake", "~> 12.3"
   s.add_development_dependency "rspec", ">= 0"
   s.add_development_dependency "nokogiri", ">= 0"

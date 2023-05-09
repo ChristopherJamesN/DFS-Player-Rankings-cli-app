@@ -36,16 +36,17 @@ GEM
 
 PLATFORMS
   arm64-darwin-20
+  arm64-darwin-21
   x86_64-darwin-19
   x86_64-linux
 
 DEPENDENCIES
   DFS-player-rankings!
-  bundler (>= 2.2.10)
+  bundler (>= 2.3.25)
   nokogiri
   pry
   rake (~> 12.3)
   rspec
 
 BUNDLED WITH
-   2.2.23
+   2.4.12
