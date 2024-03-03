@@ -1,55 +1,53 @@
 class DFSPlayerRankings::CLI
-
   def call
     DFSPlayerRankings::Scraper.new.make_players
-    puts "Welcome to the top DFS players in the world"
+    puts 'Welcome to the top DFS players in the world'
     puts "The average points for all the players is: #{DFSPlayerRankings::Player.avg_points}"
     start
   end
 
   def start
-    puts ""
-    puts "Which set of players would you like to see? 1-10, 11-20, 21-30, 31-40, 41-50"
+    puts ''
+    puts 'Which set of players would you like to see? 1-10, 11-20, 21-30, 31-40, 41-50'
     input = gets.strip.to_i
 
     print_players(input)
 
-    puts ""
-    puts "What player would you like more information on?"
+    puts ''
+    puts 'What player would you like more information on?'
     input = gets.strip
 
     player = DFSPlayerRankings::Player.find(input.to_i)
 
     print_player(player)
 
-    puts ""
-    puts "Would you like to see another player? Enter Y or N"
+    puts ''
+    puts 'Would you like to see another player? Enter Y or N'
 
     input = gets.strip.downcase
-    if input == "y"
+    if input == 'y'
       start
     else
-      puts ""
-      puts "Thank you! Have a great day!"
+      puts ''
+      puts 'Thank you! Have a great day!'
       exit
     end
   end
 
   def print_player(player)
-    puts ""
+    puts ''
     puts "----------- #{player.name} - #{player.rank} -----------"
-    puts ""
+    puts ''
     puts "Total points:           #{player.totalpoints}"
-    puts ""
+    puts ''
   end
 
   def print_players(from_number)
-    puts ""
-    puts "---------- Players #{from_number} - #{from_number+9} ----------"
-    puts ""
-    DFSPlayerRankings::Player.all[from_number-1, 10].each.with_index(from_number) do |player, index|
+    puts ''
+    puts "---------- Players #{from_number} - #{from_number + 9} ----------"
+    puts ''
+    DFSPlayerRankings::Player.all[from_number - 1, 10].each.with_index(from_number) do |player, index|
       puts "#{index}. #{player.name} - #{player.rank}"
     end
   end
-
 end
