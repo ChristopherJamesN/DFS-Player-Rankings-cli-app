@@ -4,13 +4,17 @@ This Ruby Gem provides a CLI to view the top DFS players via Rotogrinders.com
 
 ## Installation
 
-    $ gem install DFS-player-rankings
+```shell
+gem install DFS-player-rankings
+```
 
 ## Usage
 
 Type the below and follow the on screen prompts.
 
-    $ DFS-player-rankings
+```shell
+DFS-player-rankings
+```
 
 ## Development
 
