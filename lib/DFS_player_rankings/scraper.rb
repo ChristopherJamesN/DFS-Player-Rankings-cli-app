@@ -4,14 +4,14 @@ class DFSPlayerRankings::Scraper
   end
 
   def scrape_players_index
-    get_page.css('tbody tr')
+    get_page.xpath('/html/body/section/div[1]/div[2]/table/tbody/tr')
   end
 
   def make_players
     scrape_players_index.each do |r|
-      DFSPlayerRankings::Player.new(r.css('body > section > div.container.ranking > div:nth-child(3) > table > tbody > tr:nth-child(1) > td.ranking-table-avatar.left > a').text,
-                                    r.css('body > section > div.container.ranking > div:nth-child(3) > table > tbody > tr:nth-child(1) > td.gold.min.center.bold').text.strip,
-                                    r.css('body > section > div.container.ranking > div:nth-child(3) > table > tbody > tr:nth-child(1) > td:nth-child(5)').text.strip)
+      DFSPlayerRankings::Player.new(r.xpath('td[1]').text,
+                                    r.xpath('td[3]/a').text.strip,
+                                    r.xpath('td[5]').text.strip)
     end
   end
 end

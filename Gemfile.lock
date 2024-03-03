@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    DFS-player-rankings (0.0.0)
+    DFS-player-rankings (0.0.1)
 
 GEM
   remote: https://rubygems.org/
