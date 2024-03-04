@@ -29,6 +29,8 @@ One flow I've used when developing locally is:
 * Run `bundle exec rake install`
 * And then run `DFS-player-rankings` to test out the changes
 
+Alternatively, you can uninstall the gem with `gem uninstall DFS-player-rankings` and then re-install with some changes made locally using `bundle exec rake install` .
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/ChristopherJamesN/DFS-Player-Rankings-cli-app. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
